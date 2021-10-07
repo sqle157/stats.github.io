@@ -106,6 +106,7 @@ span {
 .headerImg::before {
     background-color: var(--accentColor);
     opacity: 0.5;
+    filter: contrast(1.5);
     content: ' ';
     display: block;
     position: absolute;
