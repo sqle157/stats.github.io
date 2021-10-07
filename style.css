@@ -201,6 +201,11 @@ span {
         border-radius: 10px;
     }
 
+    /* Main */
+    .mainContent {
+        width: 100%;
+    }
+
     .main {
         max-width: 100%;
         text-align: center;
