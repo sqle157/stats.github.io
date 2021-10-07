@@ -149,7 +149,7 @@ span {
 
     /* container */
     .container {
-        max-width: 400px;
+        max-width: 80%;
     }
 
     /* Main */
@@ -192,22 +192,13 @@ span {
 
     /* Container */
     .container {
-        flex-direction: column-reverse;
         margin: 30px 30px;
-        max-width: 350px;
-        height: fit-content;
         font-size: 13px;
         overflow: hidden;
         border-radius: 10px;
     }
 
-    /* Main */
-    .mainContent {
-        width: 100%;
-    }
-
     .main {
-        max-width: 100%;
         text-align: center;
         height: fit-content;
         margin-right: 0;
@@ -217,13 +208,13 @@ span {
     .headerImg {
         background-image: url(./images/image-header-mobile.jpg);
         background-repeat: no-repeat;
-        height: 250px;
     }
 
     /* Stats */
     .statWrapper {
         flex-direction: column;
         height: fit-content;
+        margin-bottom: 30px;
     }
 
     .stat:nth-of-type(1),
