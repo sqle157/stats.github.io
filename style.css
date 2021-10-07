@@ -166,7 +166,6 @@ span {
     }
 
     .headerImg {
-        background-size: 100%;
         width: 100%;
         height: 300px;
         overflow: hidden;
@@ -209,6 +208,8 @@ span {
     .headerImg {
         background-image: url(./images/image-header-mobile.jpg);
         background-repeat: no-repeat;
+        background-size: 100%;
+        height: 250px;
     }
 
     /* Stats */
