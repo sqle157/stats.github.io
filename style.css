@@ -199,9 +199,13 @@ span {
         height: fit-content;
     }
 
+    .mainContent {
+        width: 100%;
+    }
+
     .main {
         text-align: center;
-        width: 100%;
+        max-width: 100%;
         height: fit-content;
         margin-right: 0 !important;
         justify-content: space-around;
@@ -212,7 +216,7 @@ span {
         background-repeat: no-repeat;
         background-size: 100%;
         width: 100%;
-        height: 250px;
+        height: auto;
     }
 
     /* Stats */
