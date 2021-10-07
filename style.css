@@ -103,6 +103,7 @@ span {
     position: relative;
 }
 
+/* https://stackoverflow.com/questions/8195215/css-background-image-on-background-color */
 .headerImg::before {
     background-color: var(--accentColor);
     opacity: 0.5;
@@ -139,7 +140,7 @@ span {
 }
 
 /* Mobile */
-@media only screen and (max-width: 578px) {
+@media only screen and (max-width: 375px) {
 
     /* Headings */
     h1:nth-of-type(1),
