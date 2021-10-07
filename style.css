@@ -195,8 +195,8 @@ span {
         font-size: 13px;
         overflow: hidden;
         border-radius: 10px;
-        max-width: 80%;
-        height: 100%;
+        max-width: 300px;
+        height: fit-content;
     }
 
     .main {
