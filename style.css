@@ -140,7 +140,7 @@ span {
 }
 
 /* Small tablet */
-@media only screen and (max-width: 578px) {
+@media only screen and (max-width: 578px) and (min-width: 400px) {
 
     /* Heading */
     h3 {
