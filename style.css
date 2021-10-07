@@ -204,7 +204,8 @@ span {
     .main {
         max-width: 100%;
         text-align: center;
-        height: fit-content;
+        height: 100%;
+        margin-right: 0;
         justify-content: space-around;
     }
 
