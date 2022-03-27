@@ -1,236 +1,155 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 :root {
-    --mainBgColor: hsl(233, 47%, 7%);
-    --cardBgColor: hsl(244, 38%, 16%);
-    --accentColor: hsl(277, 64%, 61%);
-    --mainHeading: hsl(0, 0%, 100%);
-    --mainParagraph: hsla(0, 0%, 100%, 0.75);
-    --statHeading: hsla(0, 0%, 100%, 0.6)
+	--mainBgColor: hsl(233, 47%, 7%);
+	--cardBgColor: hsl(244, 38%, 16%);
+	--accentColor: hsl(277, 64%, 61%);
+	--mainHeading: hsl(0, 0%, 100%);
+	--mainParagraph: hsla(0, 0%, 100%, 0.75);
+	--statHeading: hsla(0, 0%, 100%, 0.6);
 }
 
 body {
-    font-size: 15px;
-    background-color: var(--mainBgColor);
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    font-family: 'Inter', sans-serif;
+	font-size: 15px;
+	background-color: var(--mainBgColor);
+	display: grid;
+	padding-block: 2rem;
+	place-items: center;
+	min-height: 100vh;
+	font-family: 'Inter', sans-serif;
 }
 
 /* Heading and Paragraphs color */
-
-h1,
-h3 {
-    color: var(--mainHeading);
+h1 {
+	font-size: 2.25rem;
+	line-height: 1.2;
+	font-weight: 700;
+	max-width: 18ch;
 }
 
-h3 {
-    margin-bottom: 10px;
+h1,
+h2 {
+	color: var(--mainHeading);
+}
+
+h2 {
+	margin-bottom: 10px;
 }
 
 h4 {
-    font-family: 'Lexend Deca', sans-serif;
-    color: var(--statHeading);
+	font-family: 'Lexend Deca', sans-serif;
+	color: var(--statHeading);
 }
 
 p {
-    color: var(--mainParagraph);
+	font-family: 'Lexend Deca', sans-serif;
+	color: var(--mainParagraph);
+	font-size: 0.9375rem;
+	font-weight: 400;
+	line-height: 1.7;
+	max-width: 50ch;
 }
 
 span {
-    color: var(--accentColor);
+	color: var(--accentColor);
+}
+
+img {
+	width: 100%;
+	height: 100%;
+	display: block;
+	object-fit: cover;
+	mix-blend-mode: multiply;
+}
+
+main {
+	width: 100%;
 }
 
 /* Container */
-
 .container {
-    display: flex;
-    max-width: 1080px;
-    height: fit-content;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    overflow: hidden;
+	display: flex;
+	max-width: min(90%, 1110px);
+	margin-inline: auto;
+	overflow: hidden;
+	border-radius: 0.5rem;
+	flex-wrap: wrap-reverse;
+}
+
+.container > * {
+	flex: 1 50%;
 }
 
 /* Main Content */
-.mainContent {
-    display: flex;
-    flex-direction: column;
-    text-align: start;
-    justify-content: center;
-    align-items: center;
-    width: 540px;
-    height: 446px;
-    background-color: var(--cardBgColor);
+.main {
+	display: flex;
+	flex-direction: column;
+	text-align: start;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--cardBgColor);
+	padding: 2.75rem 4rem;
 }
 
-.main {
-    width: 70%;
-    height: 70%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+.main__content {
+	display: flex;
+	flex-direction: column;
+}
+
+.main__content > p {
+	margin-top: 2rem;
 }
 
 /* Stat wrapper */
-.statWrapper {
-    display: flex;
-    justify-content: flex-start;
+.stats {
+	display: flex;
+	justify-content: flex-start;
+	margin-top: 4rem;
+	gap: 3rem;
 }
 
-.stat:nth-of-type(2),
-.stat:nth-of-type(3) {
-    margin-left: 40px;
-}
-
-
-/* Image wrapper */
-.headerImg {
-    background-image: url(./images/image-header-desktop.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 540px;
-    height: 446px;
-    position: relative;
-}
-
-/* https://stackoverflow.com/questions/8195215/css-background-image-on-background-color */
-.headerImg::before {
-    background-color: var(--accentColor);
-    opacity: 0.5;
-    filter: contrast(1.5);
-    content: ' ';
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
-/* .imgHeader {
-    width: 100%;
-    height: auto;
-    opacity: 0.5;
-} */
-
-/* Tablet and/or small laptop screen */
-@media only screen and (max-width: 1080px) {
-    .container {
-        flex-direction: column-reverse;
-        margin: 30px auto;
-    }
-
-    .headerImg {
-        height: 446px;
-        overflow: hidden;
-    }
-
-    .main {
-        justify-content: space-between;
-    }
-
-}
-
-/* Small tablet */
-@media only screen and (max-width: 578px) and (min-width: 400px) {
-
-    /* Heading */
-    h3 {
-        font-size: 15px;
-    }
-
-    /* container */
-    .container {
-        max-width: 400px;
-        max-height: 100%;
-    }
-
-    /* Main */
-    .mainContent {
-        width: 100%;
-    }
-
-    .main {
-        max-width: 100%;
-        height: 100%;
-        justify-content: space-evenly;
-        margin-right: 40px;
-    }
-
-    .headerImg {
-        width: 100%;
-        height: 300px;
-    }
-
+/* Image */
+.main__img {
+	background-color: var(--accentColor);
+	filter: contrast(0.9);
 }
 
 /* Mobile */
-@media only screen and (max-width: 378px) {
+@media only screen and (max-width: 40em) {
+	/* Headings */
+	h1 {
+		font-size: 1.75rem;
+		line-height: 1.14;
+	}
 
-    /* Headings */
-    h1:nth-of-type(1) {
-        margin-top: 40px;
-    }
+	/* Container */
+	.container > * {
+		flex: 1 100%;
+	}
 
-    h1:nth-of-type(1),
-    h4:nth-of-type(1) {
-        margin-bottom: 15px;
-    }
+	.main {
+		text-align: center;
+		padding: 2.5rem 2rem;
+	}
 
-    h3 {
-        font-size: 20px;
-    }
+	.main__content {
+		align-items: center;
+	}
 
-    /* Container */
-    .container {
-        margin: 30px 30px;
-        font-size: 13px;
-        overflow: hidden;
-        max-width: 350px;
-        max-height: 100%;
-    }
+	.main__content > p {
+		margin-top: 1rem;
+	}
 
-    .mainContent {
-        width: 100%;
-    }
-
-    .main {
-        text-align: center;
-        max-width: 100%;
-        height: fit-content;
-        margin-right: 0 !important;
-        justify-content: space-around;
-    }
-
-    .headerImg {
-        background-image: url(./images/image-header-mobile.jpg);
-        background-size: 100%;
-        width: 100%;
-        height: 230px;
-    }
-
-    /* Stats */
-    .statWrapper {
-        flex-direction: column;
-        height: fit-content;
-        margin-bottom: 30px;
-    }
-
-    .stat:nth-of-type(1),
-    .stat:nth-of-type(2) {
-        margin-bottom: 10px
-    }
-
-    .stat:nth-of-type(2),
-    .stat:nth-of-type(3) {
-        margin-left: 0;
-    }
+	/* Stats */
+	.stats {
+		margin-top: 2.5rem;
+		flex-direction: column;
+		gap: 2rem;
+	}
 }

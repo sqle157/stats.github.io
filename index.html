@@ -1,66 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- displays site properly based on user's device -->
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+		<link rel="stylesheet" href="style.css" />
 
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-    <link rel="stylesheet" href="style.css">
+		<title>Frontend Mentor | Stats preview card component</title>
+	</head>
 
-    <title>Frontend Mentor | Stats preview card component</title>
+	<body>
+		<main>
+			<div class="container">
+				<div class="main">
+					<div class="main__content">
+						<h1>Get <span>insights</span> that help your business grow.</h1>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
+						<p>
+							Discover the benefits of data analytics and make better decisions regarding
+							revenue, customer experience, and overall efficiency.
+						</p>
 
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-
-    </style>
-  </head>
-
-  <body>
-
-    <div class="container">
-      <div class="mainContent">
-        <div class="main">
-          <h1>Get <span>insights</span> that help your business grow.</h1>
-
-          <h4>Discover the benefits of data analytics and make better decisions regarding revenue,
-            customer
-            experience, and overall efficiency.</h4>
-
-          <div class="statWrapper">
-            <div class="stat">
-              <h3>10K+</h3>
-              <h4>COMPANIES</h4>
-            </div>
-            <div class="stat">
-              <h3>314</h3>
-              <h4>TEMPLATES</h4>
-            </div>
-            <div class="stat">
-              <h3>12M+</h3>
-              <h4>QUERIES</h4>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="headerImg">
-        <!-- <img class="imgHeader" src="./images/image-header-desktop.jpg" alt="meeting room"> -->
-      </div>
-    </div>
-    <!-- 
-    <div class="attribution">
-      <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-        Coded by <a href="#">Sang Le</a>.</p>
-    </div> -->
-  </body>
-
+						<div class="stats">
+							<div class="stat">
+								<h2>10K+</h2>
+								<p>COMPANIES</p>
+							</div>
+							<div class="stat">
+								<h2>314</h2>
+								<p>TEMPLATES</p>
+							</div>
+							<div class="stat">
+								<h2>12M+</h2>
+								<p>QUERIES</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main__img">
+					<picture>
+						<source media="(max-width: 36em)" srcset="./images/image-header-mobile.jpg" />
+						<img src="./images/image-header-desktop.jpg" alt="meeting room" />
+					</picture>
+				</div>
+			</div>
+		</main>
+	</body>
 </html>
